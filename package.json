@@ -1,0 +1,29 @@
+{
+  "name": "babelsbergjs-deltablue",
+  "version": "0.1.0",
+  "description": "DeltaBlue solver for BabelsbergJS",
+  "main": "deltablue_ext.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "echo 'Start node-inspector in a separate terminal!' && mocha -d --debug-brk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babelsbergjs/babelsbergjs-deltablue.git"
+  },
+  "keywords": [
+    "constraints",
+    "babelsberg"
+  ],
+  "author": "The Babelsberg Team",
+  "bugs": {
+    "url": "https://github.com/babelsbergjs/babelsbergjs-deltablue/issues"
+  },
+  "homepage": "https://github.com/babelsbergjs/babelsbergjs-deltablue",
+  "dependencies": {
+    "babelsbergjs-core": "^0.1.0"
+  },
+  "devDependencies": {
+    "should": "^7.0.1"
+  }
+}
