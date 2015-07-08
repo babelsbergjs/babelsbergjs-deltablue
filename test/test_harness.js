@@ -75,6 +75,7 @@ Object.extend(lively.morphic.Morph, {
 window.GlobalErrors = [];
 window.runcount = 0;
 
+*/ 
 Array.prototype.equals = (function (otherArray) {
     var array = this;
     // Returns true iff each element in `array` is equal (`==`) to its
@@ -94,6 +95,7 @@ Array.prototype.equals = (function (otherArray) {
     return true;
 });
 
+/*
 Object.subclass("TestCase", {
     assert: function (bool, msg) {
         if (!bool) {
@@ -146,6 +148,8 @@ Object.subclass("lively.morphic.Slider", {
 
 window.rect = (function() {});
 
+*/
+
 Object.subclass("Color", {
     initialize: function(r, g, b, a) {
         this.r = r || 0;
@@ -164,6 +168,8 @@ Object.extend(Color, {
             return new Color(r/255, g/255, b/255);
         }
 });
+
+/*
 
 (function() {
         var temp = window.alert;

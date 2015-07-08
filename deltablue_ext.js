@@ -55,6 +55,8 @@ DBPlanner.addMethods({
                     c.formula(m.output, inputs, m.func);
                 });
             }, planner);
+            // TODO(mjendruk): Did I add this?
+            // console.log(constraint);
             cobj.addPrimitiveConstraint(constraint);
         }
         cobj.priority = priority;
@@ -153,7 +155,8 @@ DBVariable.addMethods({
 
 
     formula: function(inputs, func) {
-        console.warn('Deprecated: Using DBVariable>>formula');
+        // TODO(mjendruk): Disable deprecation warning.
+        // console.warn('Deprecated: Using DBVariable>>formula');
         if (!Constraint.current) {
             throw 'invalid outside constraint construction';
         }
@@ -298,14 +301,13 @@ UserDBConstraint.addMethods({
     }
 });
 
-// TODO(mjendruk): What is this?
-// cop.create('PrintOMetaVariableAsBBBField').
-// refineClass(users.timfelgentreff.jsinterpreter.Variable, {
-//     asJS: function() {
-//         var result = cop.proceed();
-//         return '(window.$$bbbVarMapping.' + result + ')';
-//     }
-// });
+cop.create('PrintOMetaVariableAsBBBField').
+refineClass(jsinterpreter.Variable, {
+    asJS: function() {
+        var result = cop.proceed();
+        return '(window.$$bbbVarMapping.' + result + ')';
+    }
+});
 
 DBConstraint.addMethods({
     isConstraintObject: true,
